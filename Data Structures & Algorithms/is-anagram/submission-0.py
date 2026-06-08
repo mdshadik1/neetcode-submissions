@@ -1,0 +1,19 @@
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        freq = {}
+        freq2 = {}
+        for i in s:
+            if i in freq:
+                freq[i] = freq[i] + 1
+            else:
+                freq[i] = 1
+
+        for j in t:
+            if j in freq2:
+                freq2[j] = freq2[j] + 1
+            else:
+                freq2[j] = 1
+
+        if freq == freq2:
+            return True
+        return False
